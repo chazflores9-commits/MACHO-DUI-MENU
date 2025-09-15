@@ -1,136 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lean Menu</title>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #1a1a1a;
-        color: white;
-        overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET A GRIP</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            overflow: hidden;
+        }
 
-    /* Menu container */
-    .menu {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        width: 300px;
-        background-color: #0b0b0b;
-        border: 1px solid #111;
-        border-radius: 8px;
-        overflow: hidden;
-    }
+        /* Menu container */
+        .menu {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 300px;
+            background-color: #0b0b0b;
+            border: 1px solid #111;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-    /* Header */
-    .menu-header {
-        height: 100px;
-        background: url('4b16fe94-0175-4a3f-b5ca-6c051cbd2e7b.png') center/cover no-repeat;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        text-shadow: 0 0 5px black;
-        padding-bottom: 5px;
-    }
+        /* Header */
+        .menu-header {
+            height: 100px;
+            background: url('4b16fe94-0175-4a3f-b5ca-6c051cbd2e7b.png') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+            padding-bottom: 5px;
+        }
 
-    /* Menu items */
-    .menu-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 15px;
-        border-bottom: 1px solid #111;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
+        /* Menu items */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid #111;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
 
-    .menu-item:hover, .menu-item.active {
-        background-color: #0f3d0f;
-    }
+            .menu-item:hover, .menu-item.active {
+                background-color: #0f3d0f;
+            }
 
-    .menu-item i {
-        margin-right: 10px;
-    }
+            .menu-item i {
+                margin-right: 10px;
+            }
 
-    /* Footer */
-    .menu-footer {
-        font-size: 12px;
-        padding: 5px 10px;
-        background-color: #111;
-        text-align: center;
-    }
+        /* Footer */
+        .menu-footer {
+            font-size: 12px;
+            padding: 5px 10px;
+            background-color: #111;
+            text-align: center;
+        }
 
-    /* Notification boxes */
-    .notifications {
-        position: absolute;
-        top: 50px;
-        right: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+        /* Notification boxes */
+        .notifications {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
 
-    .notification {
-        padding: 10px 15px;
-        border-radius: 5px;
-        min-width: 250px;
-        color: white;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-    }
+        .notification {
+            padding: 10px 15px;
+            border-radius: 5px;
+            min-width: 250px;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
 
-    .info { background-color: #2f6fad; }
-    .success { background-color: #2fa62f; }
-</style>
+        .info {
+            background-color: #2f6fad;
+        }
+
+        .success {
+            background-color: #2fa62f;
+        }
+    </style>
 </head>
 <body>
 
-<div class="menu">
-    <div class="menu-header">LEAN</div>
-    <div class="menu-item active"><span><i>👤</i>Self</span> <span>»</span></div>
-    <div class="menu-item"><span><i>🟦</i>Online</span> <span>»</span></div>
-    <div class="menu-item"><span><i>⚔️</i>Combat/Weapons</span> <span>»</span></div>
-    <div class="menu-item"><span><i>👁️</i>Visual</span> <span>»</span></div>
-    <div class="menu-item"><span><i>🚗</i>Vehicle</span> <span>»</span></div>
-    <div class="menu-item"><span><i>📁</i>Miscellaneous</span> <span>»</span></div>
-    <div class="menu-item"><span><i>💥</i>Destructive</span> <span>»</span></div>
-    <div class="menu-item"><span><i>⚡</i>Triggers</span> <span>»</span></div>
-    <div class="menu-item"><span><i>⚙️</i>Settings</span> <span>»</span></div>
-    <div class="menu-footer">Version: Beta | 24hrs ago (pls report bugs) 1/9</div>
-</div>
+    <div class="menu">
+        <div class="menu-header">LEAN</div>
+        <div class="menu-item active"><span><i>👤</i>Self</span> <span>»</span></div>
+        <div class="menu-item"><span><i>🟦</i>Online</span> <span>»</span></div>
+        <div class="menu-item"><span><i>⚔️</i>Combat/Weapons</span> <span>»</span></div>
+        <div class="menu-item"><span><i>👁️</i>Visual</span> <span>»</span></div>
+        <div class="menu-item"><span><i>🚗</i>Vehicle</span> <span>»</span></div>
+        <div class="menu-item"><span><i>📁</i>Miscellaneous</span> <span>»</span></div>
+        <div class="menu-item"><span><i>💥</i>Destructive</span> <span>»</span></div>
+        <div class="menu-item"><span><i>⚡</i>Triggers</span> <span>»</span></div>
+        <div class="menu-item"><span><i>⚙️</i>Settings</span> <span>»</span></div>
+        <div class="menu-footer">Version: Beta | 24hrs ago (pls report bugs) 1/9</div>
+    </div>
 
-<div class="notifications">
-    <div class="notification info">Initializing Menu, Bypasses & Account Data...</div>
-    <div class="notification success">In Game Bypasses loaded Successfully! I hopefully you loaded the first bypass</div>
-    <div class="notification info">Lean Menu successfully loaded!</div>
-</div>
 
-<script>
-    const items = document.querySelectorAll('.menu-item');
-    let activeIndex = 0;
+    <script>
+        const items = document.querySelectorAll('.menu-item');
+        let activeIndex = 0;
 
-    function updateActive() {
-        items.forEach(item => item.classList.remove('active'));
-        items[activeIndex].classList.add('active');
-    }
-
-    document.addEventListener('keydown', e => {
-        if(e.key === "ArrowDown") {
-            activeIndex = (activeIndex + 1) % items.length;
-            updateActive();
-        } else if(e.key === "ArrowUp") {
-            activeIndex = (activeIndex - 1 + items.length) % items.length;
-            updateActive();
+        function updateActive() {
+            items.forEach(item => item.classList.remove('active'));
+            items[activeIndex].classList.add('active');
         }
-    });
-</script>
+
+        document.addEventListener('keydown', e => {
+            if (e.key === "ArrowDown") {
+                activeIndex = (activeIndex + 1) % items.length;
+                updateActive();
+            } else if (e.key === "ArrowUp") {
+                activeIndex = (activeIndex - 1 + items.length) % items.length;
+                updateActive();
+            }
+        });
+    </script>
 
 </body>
 </html>
