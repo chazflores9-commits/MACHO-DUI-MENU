@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FiveM Keyboard Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111; /* black background */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .menu {
+      background: #1a1a1a;
+      border: 2px solid #ff0000; /* red border */
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    }
+
+    .menu h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #ff0000;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu ul li {
+      padding: 10px;
+      margin: 8px 0;
+      background: #222;
+      border: 1px solid #ff0000;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .menu ul li:hover {
+      background: #ff0000;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .keybind {
+      font-size: 14px;
+      color: #aaa;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h2>Keyboard Menu</h2>
+    <ul>
+      <li>Open Inventory <span class="keybind">[I]</span></li>
+      <li>Open Map <span class="keybind">[M]</span></li>
+      <li>Phone <span class="keybind">[P]</span></li>
+      <li>Animations <span class="keybind">[F3]</span></li>
+      <li>Settings <span class="keybind">[F10]</span></li>
+    </ul>
+  </div>
+</body>
+</html>
