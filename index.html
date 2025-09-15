@@ -92,6 +92,7 @@
       font-size: 16px;
       position: relative;
       overflow: hidden;
+      transform: translateX(0);
     }
 
     .menu ul li::before {
@@ -107,15 +108,16 @@
       left: 0;
     }
 
-    .menu ul li:hover,
+    /* Active item styles */
     .menu ul li.active {
       background: rgba(255,0,0,0.9);
       color: #000;
-      transform: scale(1.1);
+      transform: translateX(-10px) scale(1.1);
       box-shadow: 0 0 18px #ff0000, 0 0 28px #ff1a1a;
+      animation: slideIn 0.2s ease-out;
     }
 
-    /* Cursor arrow for active item */
+    /* Animated cursor arrow */
     .menu ul li.active::after {
       content: "▶";
       position: absolute;
@@ -154,6 +156,11 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
     }
+
+    @keyframes slideIn {
+      from { transform: translateX(-30px) scale(1); }
+      to { transform: translateX(-10px) scale(1.1); }
+    }
   </style>
 </head>
 <body>
@@ -174,7 +181,10 @@
 
     function updateActiveItem() {
       items.forEach((item, index) => {
-        item.classList.toggle("active", index === currentIndex);
+        item.classList.remove("active");
+        if(index === currentIndex){
+          item.classList.add("active");
+        }
       });
     }
 
@@ -190,7 +200,7 @@
       if (e.key === "Enter") {
         const selected = items[currentIndex].innerText.trim();
         console.log("Selected:", selected);
-        // 🔗 Hook into NUI callback here
+        // 🔗 Hook NUI callback here
       }
     });
   </script>
