@@ -1,203 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FiveM Keyboard Menu</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+<meta charset="UTF-8">
+<title>FiveM Red Menu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: transparent;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+  }
 
-    .menu {
-      position: relative;
-      background: rgba(15, 15, 15, 0.35);
-      border-radius: 15px;
-      padding: 25px;
-      width: 360px;
-      backdrop-filter: blur(14px) saturate(160%) contrast(120%);
-      -webkit-backdrop-filter: blur(14px) saturate(160%) contrast(120%);
-      box-shadow: 0 0 30px rgba(255,0,0,0.7), inset 0 0 25px rgba(255,0,0,0.3);
-      animation: fadeIn 0.6s ease;
-      overflow: hidden;
-    }
+  .menu {
+    width: 300px;
+    background: rgba(20,20,20,0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(255,0,0,0.6);
+  }
 
-    /* Neon animated border */
-    .menu::after {
-      content: "";
-      position: absolute;
-      top: -2px; left: -2px;
-      right: -2px; bottom: -2px;
-      border-radius: 15px;
-      padding: 2px;
-      background: linear-gradient(270deg, #ff0000, #ff4d4d, #ff0000);
-      background-size: 400% 400%;
-      animation: borderFlow 6s linear infinite;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      z-index: 0;
-    }
+  .menu-header {
+    position: relative;
+    height: 80px;
+    background: url('https://i.imgur.com/0Y0KzO2.png') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff0000;
+  }
 
-    /* Glowing background pulse */
-    .menu::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%);
-      animation: pulse 4s infinite alternate;
-      z-index: 0;
-    }
+  .menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+    flex: 1;
+    overflow-y: auto;
+  }
 
-    .menu h2 {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #ff4d4d;
-      text-shadow: 0 0 12px #ff0000, 0 0 22px #ff0000;
-      letter-spacing: 2px;
-    }
+  .menu-list li {
+    padding: 12px 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+  }
 
-    .menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: relative;
-      z-index: 1;
-    }
+  .menu-list li i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+  }
 
-    .menu ul li {
-      padding: 12px;
-      margin: 10px 0;
-      background: rgba(30, 30, 30, 0.45);
-      border: 1px solid rgba(255,0,0,0.6);
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      font-size: 16px;
-      position: relative;
-      overflow: hidden;
-    }
+  .menu-list li.active {
+    background: rgba(255,0,0,0.9);
+    color: #fff;
+  }
 
-    .menu ul li::before {
-      content: "";
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: rgba(255,0,0,0.25);
-      transition: left 0.3s ease;
-    }
+  .menu-list li.active i {
+    color: #fff;
+  }
 
-    .menu ul li:hover::before {
-      left: 0;
-    }
+  .menu-list li span.arrow {
+    color: #ff4d4d;
+  }
 
-    .menu ul li.active {
-      background: rgba(255,0,0,0.9);
-      color: #000;
-      transform: translateX(-10px) scale(1.1);
-      box-shadow: 0 0 18px #ff0000, 0 0 28px #ff1a1a;
-      animation: slideIn 0.2s ease-out;
-    }
+  .menu-footer {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .menu ul li.active::after {
-      content: "▶";
-      position: absolute;
-      left: -25px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #ff0000;
-      font-size: 18px;
-      text-shadow: 0 0 8px #ff0000, 0 0 15px #ff4d4d;
-      animation: blink 1s infinite;
-    }
+  /* Scrollbar */
+  .menu-list::-webkit-scrollbar {
+    width: 6px;
+  }
 
-    .keybind {
-      font-size: 14px;
-      color: #ff9a9a;
-      margin-left: 8px;
-    }
+  .menu-list::-webkit-scrollbar-track {
+    background: rgba(30,30,30,0.5);
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes pulse {
-      from { transform: scale(1); opacity: 0.4; }
-      to { transform: scale(1.2); opacity: 0.8; }
-    }
-
-    @keyframes borderFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateX(-30px) scale(1); }
-      to { transform: translateX(-10px) scale(1.1); }
-    }
-  </style>
+  .menu-list::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 3px;
+  }
+</style>
 </head>
 <body>
-  <div class="menu">
-    <h2>⚡ Crust Menu ⚡</h2>
-    <ul id="menuList">
-      <li class="active">Open Inventory <span class="keybind">[I]</span></li>
-      <li>Open Map <span class="keybind">[M]</span></li>
-      <li>Phone <span class="keybind">[P]</span></li>
-      <li>Animations <span class="keybind">[F3]</span></li>
-      <li>Settings <span class="keybind">[F10]</span></li>
-    </ul>
+<div class="menu">
+  <div class="menu-header">CRUST MENU</div>
+  <ul class="menu-list" id="menuList">
+    <li class="active"><i class="fas fa-user"></i> Self <span class="arrow">»</span></li>
+    <li><i class="fas fa-users"></i> Online <span class="arrow">»</span></li>
+    <li><i class="fas fa-crosshairs"></i> Combat/Weapons <span class="arrow">»</span></li>
+    <li><i class="fas fa-eye"></i> Visual <span class="arrow">»</span></li>
+    <li><i class="fas fa-car"></i> Vehicle <span class="arrow">»</span></li>
+    <li><i class="fas fa-folder"></i> Miscellaneous <span class="arrow">»</span></li>
+    <li><i class="fas fa-bomb"></i> Destructive <span class="arrow">»</span></li>
+    <li><i class="fas fa-bolt"></i> Triggers <span class="arrow">»</span></li>
+    <li><i class="fas fa-cog"></i> Settings <span class="arrow">»</span></li>
+  </ul>
+  <div class="menu-footer">
+    <span>Version: Beta</span>
+    <span>1/9</span>
   </div>
+</div>
 
-  <script>
-    const items = document.querySelectorAll("#menuList li");
-    let currentIndex = 0;
+<script>
+  const items = document.querySelectorAll("#menuList li");
+  let currentIndex = 0;
 
-    function updateActiveItem() {
-      items.forEach((item, index) => {
-        item.classList.remove("active");
-        if(index === currentIndex){
-          item.classList.add("active");
-        }
-      });
-    }
-
-    document.addEventListener("keydown", (e) => {
-      if(e.key === "ArrowDown") {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateActiveItem();
-      }
-      if(e.key === "ArrowUp") {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateActiveItem();
-      }
-      if(e.key === "Enter") {
-        const selected = items[currentIndex].innerText.trim();
-        console.log("Selected:", selected);
-        // 🔗 Hook NUI callback here
-      }
+  function updateActive() {
+    items.forEach((item, i) => {
+      item.classList.toggle("active", i === currentIndex);
     });
-  </script>
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateActive();
+    }
+    if (e.key === "ArrowUp") {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateActive();
+    }
+    if (e.key === "Enter") {
+      console.log("Selected:", items[currentIndex].innerText.trim());
+      // hook to FiveM NUI callback
+    }
+  });
+</script>
 </body>
 </html>
