@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>FiveM Keyboard Menu</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111; /* black background */
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #000 60%, #111 100%);
       color: #fff;
       display: flex;
       align-items: center;
@@ -16,18 +18,21 @@
     }
 
     .menu {
-      background: #1a1a1a;
-      border: 2px solid #ff0000; /* red border */
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 0 15px rgba(255,0,0,0.5);
+      background: rgba(20, 20, 20, 0.95);
+      border: 2px solid #ff0000;
+      border-radius: 15px;
+      padding: 25px;
+      width: 340px;
+      box-shadow: 0 0 25px rgba(255,0,0,0.8), 0 0 50px rgba(255,0,0,0.4);
+      animation: fadeIn 0.5s ease;
     }
 
     .menu h2 {
       text-align: center;
-      margin-bottom: 15px;
-      color: #ff0000;
+      margin-bottom: 20px;
+      color: #ff1a1a;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+      letter-spacing: 2px;
     }
 
     .menu ul {
@@ -37,39 +42,89 @@
     }
 
     .menu ul li {
-      padding: 10px;
-      margin: 8px 0;
-      background: #222;
+      padding: 12px;
+      margin: 10px 0;
+      background: linear-gradient(135deg, #1a1a1a, #222);
       border: 1px solid #ff0000;
-      border-radius: 8px;
+      border-radius: 10px;
       text-align: center;
       cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
+      transition: all 0.25s ease;
+      font-size: 16px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .menu ul li:hover {
+    .menu ul li::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: rgba(255,0,0,0.2);
+      transition: left 0.3s ease;
+    }
+
+    .menu ul li:hover::before {
+      left: 0;
+    }
+
+    .menu ul li:hover,
+    .menu ul li.active {
       background: #ff0000;
       color: #000;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 0 15px #ff0000;
     }
 
     .keybind {
       font-size: 14px;
-      color: #aaa;
-      margin-left: 10px;
+      color: #ff8080;
+      margin-left: 8px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <div class="menu">
-    <h2>Keyboard Menu</h2>
-    <ul>
-      <li>Open Inventory <span class="keybind">[I]</span></li>
+    <h2>⚡ Crust Menu ⚡</h2>
+    <ul id="menuList">
+      <li class="active">Open Inventory <span class="keybind">[I]</span></li>
       <li>Open Map <span class="keybind">[M]</span></li>
       <li>Phone <span class="keybind">[P]</span></li>
       <li>Animations <span class="keybind">[F3]</span></li>
       <li>Settings <span class="keybind">[F10]</span></li>
     </ul>
   </div>
+
+  <script>
+    const items = document.querySelectorAll("#menuList li");
+    let currentIndex = 0;
+
+    function updateActiveItem() {
+      items.forEach((item, index) => {
+        item.classList.toggle("active", index === currentIndex);
+      });
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateActiveItem();
+      }
+      if (e.key === "ArrowUp") {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateActiveItem();
+      }
+      if (e.key === "Enter") {
+        const selected = items[currentIndex].innerText.trim();
+        console.log("Selected:", selected);
+        // Hook NUI callback here if needed
+      }
+    });
+  </script>
 </body>
 </html>
