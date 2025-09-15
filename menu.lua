@@ -4107,3 +4107,4 @@ function OSINT:SyncExploitsInput(data)
         self.exploitsInputValues[data.field] = data.value
     end
 end
+
