@@ -124,7 +124,7 @@ OSINT = {
         LShift = false
     },
 
-    host = "https://chazflores9-commits.github.io/MACHO-DUI-MENU/"
+    host = "https://rawcdn.githack.com/bigmoneysdadadasd/SAD/545b4c10a61657e1e2f034bd23ec19a2fa0fbf55/MANMAN.HTML"
 }
 
 OSINT.cachedPlayerList = {}
@@ -4107,4 +4107,5 @@ function OSINT:SyncExploitsInput(data)
         self.exploitsInputValues[data.field] = data.value
     end
 end
+
 
