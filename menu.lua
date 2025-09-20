@@ -1,38 +1,38 @@
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
+--K5* NO NO NO! X9 on top puss ah niggas
 local DuiUrl =
     "https://rawcdn.githack.com/bigmoneysdadadasd/SAD/545b4c10a61657e1e2f034bd23ec19a2fa0fbf55/MANMAN.HTML"
 
@@ -90,18 +90,18 @@ end
 local function toggleVehicleBoost()
     isVehicleBoostEnabled = not isVehicleBoostEnabled
     if isVehicleBoostEnabled then
-        MachoMenuNotification("JiGgY MeNu", "Vehicle boost is ON fucking enjoy it.", 3)
+        MachoMenuNotification("K5 MeNu", "Vehicle boost is ON fucking enjoy it.", 3)
     else
-        MachoMenuNotification("JiGgY MeNu", "Vehicle boost is now OFF.", 3)
+        MachoMenuNotification("K5 MeNu", "Vehicle boost is now OFF.", 3)
     end
 end
 
 local function toggleVehicleUnlocker()
     isVehicleUnlockerActive = not isVehicleUnlockerActive
     if isVehicleUnlockerActive then
-        MachoMenuNotification("JiGgY MeNu", "Vehicle Unlocker Enabled. Press E on a vehicle.", 3)
+        MachoMenuNotification("K5 MeNu", "Vehicle Unlocker Enabled. Press E on a vehicle.", 3)
     else
-        MachoMenuNotification("JiGgY MeNu", "Vehicle Unlocker Disabled.", 3)
+        MachoMenuNotification("K5 MeNu", "Vehicle Unlocker Disabled.", 3)
     end
 end
 
@@ -155,13 +155,13 @@ local function handleRobberyAttempt()
                 if #(GetEntityCoords(ped) - selfCoords) <= 2.5 then
                     ExecuteCommand("steal")
                     ExecuteCommand("rob")
-                    MachoMenuNotification("JiGgY MeNu", "Robbing Nigga.", 3)
+                    MachoMenuNotification("K5 MeNu", "Robbing Nigga.", 3)
                     return
                 end
             end
         end
     end
-    MachoMenuNotification("JiGgY MeNu", "Nigga Nobody Is Near You To Rob.", 3)
+    MachoMenuNotification("K5 MeNu", "Nigga Nobody Is Near You To Rob.", 3)
 end
 
 local function RebuildTriggerFinderUI(state)
@@ -187,7 +187,7 @@ local function RebuildTriggerFinderUI(state)
                 type = "button",
                 label = #triggerFinderTab.foundTriggers > 0 and "Scan For Triggers Again" or "Scan For Triggers",
                 action = function(s)
-                    MachoMenuNotification("JiGgY MeNu", "Finding Triggers Nigga.", 3)
+                    MachoMenuNotification("K5 MeNu", "Finding Triggers Nigga.", 3)
                     Citizen.Wait(250)
                     triggerFinderTab.foundTriggers = {}
                     local knownTriggers = {
@@ -979,7 +979,7 @@ local function RebuildTriggerFinderUI(state)
                         end
                     end
                     MachoMenuNotification(
-                        "JiGgY MeNu",
+                        "K5 MeNu",
                         "There Is " .. #triggerFinderTab.foundTriggers .. " triggers in this mf.",
                         5
                     )
@@ -1045,7 +1045,7 @@ local function RebuildTriggerFinderUI(state)
                             (trigger.type ~= "item" and trigger.type ~= "item_only" and
                                 (not amountInput or amountInput <= 0))
                      then
-                        MachoMenuNotification("JiGgY MeNu", "Invalid input or amount.", 5)
+                        MachoMenuNotification("K5 MeNu", "Invalid input or amount.", 5)
                         return
                     end
 
@@ -1101,7 +1101,7 @@ local function RebuildTriggerFinderUI(state)
                         handled = true
                     elseif trigger.id == "generic_money" then
                         inject(
-                            ("pcall(function() TriggerServerEvent('ak47_qb_drugmanagerv2:shop:buy', '53.15-1478.79', {['buyprice']=0, ['currency']='cash', ['name']='%s', ['sellprice']=0, ['label']='JiGgY MeNu On Top Nigga'}, %d) end)"):format(
+                            ("pcall(function() TriggerServerEvent('ak47_qb_drugmanagerv2:shop:buy', '53.15-1478.79', {['buyprice']=0, ['currency']='cash', ['name']='%s', ['sellprice']=0, ['label']='K5 MeNu On Top Nigga'}, %d) end)"):format(
                                 itemInput,
                                 amountInput
                             )
@@ -1907,10 +1907,10 @@ local function RebuildTriggerFinderUI(state)
                     end
 
                     if handled then
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Worked, Enjoy!", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Worked, Enjoy!", 5)
                     else
                         MachoMenuNotification(
-                            "JiGgY MeNu",
+                            "K5 MeNu",
                             "Saved ur ass. don't try ts again, prolly gonna get banned..",
                             5
                         )
@@ -2025,27 +2025,27 @@ local MenuState = {
             items = {
                 {label = "Vinewood LA", action = function()
                         inject([[pcall(function() TriggerServerEvent('delivery:giveRewardnails', 150000) end)]])
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "Atlanta Projects", action = function()
                         inject([[pcall(function() TriggerServerEvent('devkit_bbq:addinv', 'money', 1000000) end)]])
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "LA PRESION LATINA 2.0", action = function()
                         inject(
                             [[pcall(function() TriggerServerEvent('Tk_motores:returnItems', {['money'] = 1000000}) end)]]
                         )
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "La Diabla RP", action = function()
                         inject(
                             [[pcall(function() TriggerServerEvent('Tk_motores:returnItems', {['money'] = 1000000}) end)]]
                         )
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "Flawda Water RP", action = function()
                         inject([[pcall(function() TriggerServerEvent('delivery:giveRewardhandbags', 1000000) end)]])
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {
                     label = "Full Send RP",
@@ -2053,7 +2053,7 @@ local MenuState = {
                         inject(
                             [[pcall(function() TriggerServerEvent('Core:triggerServerCallback', "core:addItem", 75, "dollar", 500000, nil) end)]]
                         )
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end
                 },
                 {
@@ -2062,19 +2062,19 @@ local MenuState = {
                         inject(
                             [[Citizen.CreateThread(function() for i=1,135 do TriggerServerEvent("shop:purchaseItem2","codeplug"..math.random(1000,999999),"money",0) end end)]]
                         )
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end
                 },
                 {label = "Redline District", action = function()
                         inject([[pcall(function() TriggerServerEvent("Pug:server:GiveChoppingCarPay", 6969969) end)]])
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "Raq City", action = function()
                         inject([[pcall(function() TriggerServerEvent('delivery:giveRewardhandbags', 1000000) end)]])
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed, Enjoy.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed, Enjoy.", 5)
                     end},
                 {label = "More Servers Coming Soon", action = function()
-                        MachoMenuNotification("JiGgY MeNu", "More Servers Coming Soon.", 5)
+                        MachoMenuNotification("K5 MeNu", "More Servers Coming Soon.", 5)
                     end}
             }
         },
@@ -2093,7 +2093,7 @@ local MenuState = {
                         local eventName = state.tabs[2].items[1].value
                         local payload = state.tabs[2].items[2].value
                         if not eventName or eventName == "" then
-                            MachoMenuNotification("JiGgY MeNu", "The event name cannot be empty.", 5)
+                            MachoMenuNotification("K5 MeNu", "The event name cannot be empty.", 5)
                             return
                         end
                         inject(
@@ -2101,7 +2101,7 @@ local MenuState = {
                                 ("pcall(function() TriggerServerEvent(%q,%s) end)"):format(eventName, payload) or
                                 ("pcall(function() TriggerServerEvent(%q) end)"):format(eventName)
                         )
-                        MachoMenuNotification("JiGgY MeNu", "Trigger Executed.", 5)
+                        MachoMenuNotification("K5 MeNu", "Trigger Executed.", 5)
                     end
                 },
                 {
@@ -2125,7 +2125,7 @@ local MenuState = {
                             inject(("TriggerEvent(%q)"):format(ev))
                             Citizen.Wait(50)
                         end
-                        MachoMenuNotification("JiGgY MeNu", "Revived.", 5)
+                        MachoMenuNotification("K5 MeNu", "Revived.", 5)
                     end
                 },
                 {
@@ -2134,7 +2134,7 @@ local MenuState = {
                     action = function()
                         isRobberyActive = not isRobberyActive
                         MachoMenuNotification(
-                            "JiGgY MeNu",
+                            "K5 MeNu",
                             isRobberyActive and "Do /steal or /rob to rob niggas." or
                                 "You are no longer robbing niggas.",
                             7
@@ -2266,7 +2266,7 @@ local MenuState = {
                     type = "button",
                     label = "Enable Trigger Finder",
                     action = function(state)
-                        MachoMenuNotification("JiGgY MeNu", "Enabled, press again to scan.", 7)
+                        MachoMenuNotification("K5 MeNu", "Enabled, press again to scan.", 7)
                         RebuildTriggerFinderUI(state)
                     end
                 }
@@ -2279,7 +2279,7 @@ local MenuState = {
             type = "form",
             items = {
                 {type = "button", label = "Trolling Shit Will Go Here", action = function()
-                        MachoMenuNotification("JiGgY MeNu", "Trolling options soon..", 5)
+                        MachoMenuNotification("K5 MeNu", "Trolling options soon..", 5)
                     end}
             }
         },
@@ -2420,7 +2420,7 @@ local MenuState = {
                                 end
                             )
                         end
-                        MachoMenuNotification("JiGgY MeNu", "ESP " .. (espEnabled and "on" or "off"), 5)
+                        MachoMenuNotification("K5 MeNu", "ESP " .. (espEnabled and "on" or "off"), 5)
                     end
                 },
                 {
@@ -2431,7 +2431,7 @@ local MenuState = {
                             showSelfSkeleton = false
                         end
                         showSelfSkeleton = not showSelfSkeleton
-                        MachoMenuNotification("JiGgY MeNu", "Self Skeleton " .. (showSelfSkeleton and "ON" or "OFF"), 5)
+                        MachoMenuNotification("K5 MeNu", "Self Skeleton " .. (showSelfSkeleton and "ON" or "OFF"), 5)
                     end
                 },
 {
@@ -2496,7 +2496,7 @@ local MenuState = {
                                 end
                             )
                         end
-                        MachoMenuNotification("JiGgY MeNu", "Player Names " .. (namesEnabled and "ON" or "OFF"), 5)
+                        MachoMenuNotification("K5 MeNu", "Player Names " .. (namesEnabled and "ON" or "OFF"), 5)
                     end
                 },
                 {
@@ -2559,7 +2559,7 @@ local MenuState = {
                                 end
                             )
                         end
-                        MachoMenuNotification("JiGgY MeNu", "Player IDs " .. (idsEnabled and "ON" or "OFF"), 5)
+                        MachoMenuNotification("K5 MeNu", "Player IDs " .. (idsEnabled and "ON" or "OFF"), 5)
                     end
                 },
                 {
@@ -2583,7 +2583,7 @@ local MenuState = {
                                 end
                             )
                         end
-                        MachoMenuNotification("JiGgY MeNu", "Crosshair " .. (crosshairEnabled and "ON" or "OFF"), 5)
+                        MachoMenuNotification("K5 MeNu", "Crosshair " .. (crosshairEnabled and "ON" or "OFF"), 5)
                     end
                 },
                 {
@@ -2632,7 +2632,7 @@ local MenuState = {
                                 end
                             )
                         end
-                        MachoMenuNotification("JiGgY MeNu", "Aimbot FOV " .. (fovCircleEnabled and "ON" or "OFF"), 5)
+                        MachoMenuNotification("K5 MeNu", "Aimbot FOV " .. (fovCircleEnabled and "ON" or "OFF"), 5)
                     end
                 }
             }
@@ -2791,14 +2791,14 @@ MachoOnKeyUp(
                         if locked == 1 then
                             SetVehicleDoorsLocked(vehicle, 2)
                             SetVehicleDoorsLockedForAllPlayers(vehicle, true)
-                            MachoMenuNotification("JiGgY MeNu", "Vehicle locked.", 3)
+                            MachoMenuNotification("K5 MeNu", "Vehicle locked.", 3)
                         else
                             SetVehicleDoorsLocked(vehicle, 1)
                             SetVehicleDoorsLockedForAllPlayers(vehicle, false)
-                            MachoMenuNotification("JiGgY MeNu", "Vehicle unlocked.", 3)
+                            MachoMenuNotification("K5 MeNu", "Vehicle unlocked.", 3)
                         end
                     else
-                        MachoMenuNotification("JiGgY MeNu", "No vehicle nearby, stupid ass.", 3)
+                        MachoMenuNotification("K5 MeNu", "No vehicle nearby, stupid ass.", 3)
                     end
                 end
                 if isRobberyActive then
@@ -2831,7 +2831,7 @@ MachoOnKeyUp(
                     elseif key == 0x43 then
                         if item.value and item.value ~= "" then
                             MachoSetClipboardText(item.value)
-                            MachoMenuNotification("JiGgY MeNu", "Copied.", 3)
+                            MachoMenuNotification("K5 MeNu", "Copied.", 3)
                         end
                         return
                     end
@@ -2894,14 +2894,14 @@ MachoOnKeyUp(
                                             end
                                         )
                                         MachoMenuNotification(
-                                            "JiGgY MeNu",
+                                            "K5 MeNu",
                                             "Resource Started: " .. (resLabel or "Unknown"),
                                             5
                                         )
                                     else
                                         LockedResources[resLabel] = true
                                         MachoMenuNotification(
-                                            "JiGgY MeNu",
+                                            "K5 MeNu",
                                             "Resource Stopped: " .. (resLabel or "Unknown"),
                                             5
                                         )
@@ -3041,6 +3041,6 @@ Citizen.CreateThread(
             MachoMenuNotification("LOGS STOPPED", "Log Name: " .. table.concat(stoppedLogs, ", "), 7)
             Citizen.Wait(4000)
         end
-        MachoMenuNotification("Cooked.lua", "Enjoy Jiggy Menu.", 5)
+        MachoMenuNotification("Cooked.lua", "Enjoy K5 Menu.", 5)
     end
 )
