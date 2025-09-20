@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>K5 Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CrackV - Release</title>
   <style>
     body {
       margin: 0;
-      background-color: rgba(0, 0, 0, 0.6);
       font-family: 'Segoe UI', sans-serif;
-      color: white;
+      background-color: #0f0f0f;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,198 +17,46 @@
     }
 
     .menu-container {
-      display: flex;
-      width: 640px;
-      background-color: #111;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
-    }
-
-    .panel {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
+      background-color: #1a1a1a;
+      border: 2px solid #8000ff;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px #8000ff;
     }
 
     .menu-header {
-      background-color: #000;
-      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .logo-left, .logo-right {
-      width: 24px;
-      height: 24px;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .logo-left {
-      background-image: url('asterisk-icon.png'); /* Replace with your icon */
-    }
-
-    .logo-right {
-      background-image: url('checkmark-icon.png'); /* Replace with your icon */
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #8000ff;
     }
 
     .menu-title {
-      padding: 10px;
-      font-size: 14px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 16px;
       color: #ccc;
-    }
-
-    .menu-item {
-      padding: 12px;
-      border-top: 1px solid #222;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: default;
-      transition: background 0.2s ease;
-    }
-
-    .menu-item.active {
-      background-color: #800080;
     }
 
     .menu-footer {
-      padding: 8px 12px;
+      margin-top: 40px;
+      text-align: center;
       font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      background-color: #000;
-      color: #ccc;
-    }
-
-    .hidden {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .visible {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 0.2s ease;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <div class="menu-container">
-    <div class="panel" id="main-panel">
-      <div class="menu-header">
-        <div class="logo-left"></div>
-        <div class="logo-right"></div>
-      </div>
-      <div class="menu-title">Main Menu</div>
-      <div class="menu-item active">Player <span>›</span></div>
-      <div class="menu-item">Server <span>›</span></div>
-      <div class="menu-item">Weapon <span>›</span></div>
-      <div class="menu-item">Vehicle <span>›</span></div>
-      <div class="menu-item">Teleport <span>›</span></div>
-      <div class="menu-item">Economy <span>›</span></div>
-      <div class="menu-item">Miscellaneous <span>›</span></div>
-      <div class="menu-item">Settings <span>›</span></div>
-      <div class="menu-footer">
-        <span>K5 menu - release</span>
-        <span id="main-page">1/8</span>
-      </div>
+    <div class="menu-header">
+      <span>*</span>
+      <span>V</span>
     </div>
-
-    <div class="panel hidden" id="sub-panel">
-      <div class="menu-header">
-        <div class="logo-left"></div>
-        <div class="logo-right"></div>
-      </div>
-      <div class="menu-title">Submenu</div>
-      <div class="menu-item active">Option A</div>
-      <div class="menu-item">Option B</div>
-      <div class="menu-item">Option C</div>
-      <div class="menu-item">Option D</div>
-      <div class="menu-footer">
-        <span>Submenu</span>
-        <span id="sub-page">1/4</span>
-      </div>
-    </div>
+    <div class="menu-title">Main Menu</div>
+    <div class="menu-footer">CrackV - release | 1/8</div>
   </div>
-
-  <script>
-    let mainIndex = 0;
-    let subIndex = 0;
-    let inSubmenu = false;
-
-    const mainItems = document.querySelectorAll('#main-panel .menu-item');
-    const subItems = document.querySelectorAll('#sub-panel .menu-item');
-    const mainPage = document.getElementById('main-page');
-    const subPage = document.getElementById('sub-page');
-    const subPanel = document.getElementById('sub-panel');
-
-    function updateMain() {
-      mainItems.forEach((item, i) => item.classList.toggle('active', i === mainIndex));
-      mainPage.textContent = `${mainIndex + 1}/${mainItems.length}`;
-      window.postMessage({ type: 'highlight', index: mainIndex });
-    }
-
-    function updateSub() {
-      subItems.forEach((item, i) => item.classList.toggle('active', i === subIndex));
-      subPage.textContent = `${subIndex + 1}/${subItems.length}`;
-      window.postMessage({ type: 'highlight-sub', index: subIndex });
-    }
-
-    function openSubmenu() {
-      inSubmenu = true;
-      subPanel.classList.remove('hidden');
-      subPanel.classList.add('visible');
-      subIndex = 0;
-      updateSub();
-      window.postMessage({ type: 'openSub', index: mainIndex });
-    }
-
-    function closeSubmenu() {
-      inSubmenu = false;
-      subPanel.classList.remove('visible');
-      subPanel.classList.add('hidden');
-      window.postMessage({ type: 'closeSub' });
-    }
-
-    window.addEventListener('keydown', (e) => {
-      if (!inSubmenu) {
-        if (e.key === 'ArrowUp') {
-          mainIndex = (mainIndex - 1 + mainItems.length) % mainItems.length;
-          updateMain();
-        }
-        if (e.key === 'ArrowDown') {
-          mainIndex = (mainIndex + 1) % mainItems.length;
-          updateMain();
-        }
-        if (e.key === 'ArrowRight') {
-          openSubmenu();
-        }
-        if (e.key === 'Enter') {
-          window.postMessage({ type: 'confirm', index: mainIndex });
-        }
-      } else {
-        if (e.key === 'ArrowUp') {
-          subIndex = (subIndex - 1 + subItems.length) % subItems.length;
-          updateSub();
-        }
-        if (e.key === 'ArrowDown') {
-          subIndex = (subIndex + 1) % subItems.length;
-          updateSub();
-        }
-        if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
-          closeSubmenu();
-        }
-        if (e.key === 'Enter') {
-          window.postMessage({ type: 'confirm-sub', index: subIndex });
-        }
-      }
-    });
-
-    updateMain();
-  </script>
 </body>
 </html>
