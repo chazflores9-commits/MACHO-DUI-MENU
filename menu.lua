@@ -1,38 +1,3 @@
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
---jiggy* NO NO NO! X9 on top puss ah niggas
 local DuiUrl =
     "https://rawcdn.githack.com/bigmoneysdadadasd/SAD/545b4c10a61657e1e2f034bd23ec19a2fa0fbf55/MANMAN.HTML"
 
@@ -3044,3 +3009,4 @@ Citizen.CreateThread(
         MachoMenuNotification("Cooked.lua", "Enjoy Jiggy Menu.", 5)
     end
 )
+
