@@ -3,184 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CapTcha Menu</title>
+<title>FiveM Menu</title>
 <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
     body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #1e1e1e;
+        background: rgba(0, 0, 0, 0.8); /* dark transparent background like in your screenshot */
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
 
-    .menu-container {
-        width: 350px;
-        background: rgba(0, 0, 0, 0.6);
+    /* Menu Container */
+    .menu {
+        width: 300px;
+        background: rgba(20, 20, 20, 0.95);
+        border: 2px solid #00ffea; /* neon outline */
         border-radius: 10px;
-        backdrop-filter: blur(10px);
-        color: #fff;
         padding: 20px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    .menu-title {
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-shadow: 0 0 8px #ccc;
-        color: #e0e0e0;
-    }
-
-    .tab {
         display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .tab button {
-        background: none;
-        border: none;
-        color: #1e90ff;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-        padding: 5px 10px;
-        border-bottom: 2px solid transparent;
-    }
-
-    .tab button.active {
-        border-bottom: 2px solid #1e90ff;
-    }
-
-    .menu-section {
+    /* Menu Header */
+    .menu h1 {
+        color: #00ffea;
+        text-align: center;
         margin-bottom: 15px;
+        font-size: 22px;
     }
 
-    .menu-section label {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(255,255,255,0.05);
-        padding: 10px;
+    /* Menu Items */
+    .menu button {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #00ffea;
+        color: #00ffea;
+        padding: 12px;
         border-radius: 5px;
-        margin-bottom: 5px;
         cursor: pointer;
+        transition: 0.2s;
+        font-size: 16px;
     }
 
-    .menu-section label:hover {
-        background: rgba(255,255,255,0.1);
-    }
-
-    .toggle-switch {
-        position: relative;
-        width: 40px;
-        height: 20px;
-    }
-
-    .toggle-switch input {
-        display: none;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        background-color: #ccc;
-        border-radius: 20px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transition: 0.4s;
-    }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 16px;
-        width: 16px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        border-radius: 50%;
-        transition: 0.4s;
-    }
-
-    input:checked + .slider {
-        background-color: #1e90ff;
-    }
-
-    input:checked + .slider:before {
-        transform: translateX(20px);
-    }
-
-    .footer {
-        font-size: 12px;
-        text-align: center;
-        margin-top: 15px;
-        color: #aaa;
+    .menu button:hover {
+        background: #00ffea;
+        color: #000;
     }
 </style>
 </head>
 <body>
 
-<div class="menu-container">
-    <div class="menu-title">CapTcha</div>
-
-    <div class="tab">
-        <button class="active">Main Menu</button>
-    </div>
-
-    <div class="menu-section">
-        <strong>Self</strong>
-        <label>God Mode
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>Super Jump
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>Beast Jump
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>Freecam
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>Noclip
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>Invisible
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-        <label>No Ragdoll
-            <div class="toggle-switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </div>
-        </label>
-    </div>
-
-    <div class="footer">CapTcha.Rip - release 1/24</div>
+<div class="menu">
+    <h1>Main Menu</h1>
+    <button id="option1">Option 1</button>
+    <button id="option2">Option 2</button>
+    <button id="option3">Option 3</button>
+    <button id="option4">Option 4</button>
 </div>
+
+<script>
+    // Example JS for button interactions
+    document.getElementById('option1').addEventListener('click', () => {
+        console.log('Option 1 clicked');
+    });
+    document.getElementById('option2').addEventListener('click', () => {
+        console.log('Option 2 clicked');
+    });
+    document.getElementById('option3').addEventListener('click', () => {
+        console.log('Option 3 clicked');
+    });
+    document.getElementById('option4').addEventListener('click', () => {
+        console.log('Option 4 clicked');
+    });
+</script>
 
 </body>
 </html>
